@@ -1,4 +1,5 @@
 import math
+import csv
 
 #Флаг Швейцарии
 for i in range(10):
@@ -100,3 +101,20 @@ for i in range(len(graph)):
         print(graph[i][j], end='')
     print()
 
+#Строим диаграмму
+
+count16 = 0
+countother = 0
+
+with open('books.csv') as f:
+    reader = csv.DictReader(f, delimiter=';')
+    for row in reader:
+        if "16" == row.get("Возрастное ограничение на книгу"):
+            count16 += 1
+        else:
+            countother += 1
+
+print('Книги для возраста 16 лет')
+print('\033[0;41m'+' '*int(count16/(countother + count16)*100)+'\033[0;0m'+str(int(count16/(countother + count16)*100))+"%")
+print('Остальные книги')
+print('\033[0;44m'+' '*int(countother/(countother + count16)*100)+'\033[0;0m'+str(100-int(count16/(countother + count16)*100))+"%")
