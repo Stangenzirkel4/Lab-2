@@ -1,5 +1,7 @@
 import math
 import csv
+import os
+import time
 
 #Флаг Швейцарии
 for i in range(10):
@@ -118,3 +120,13 @@ print('Книги для возраста 16 лет')
 print('\033[0;41m'+' '*int(count16/(countother + count16)*100)+'\033[0;0m'+str(int(count16/(countother + count16)*100))+"%")
 print('Остальные книги')
 print('\033[0;44m'+' '*int(countother/(countother + count16)*100)+'\033[0;0m'+str(100-int(count16/(countother + count16)*100))+"%")
+
+#Анимация
+for i in range(10):         #Количество повторов
+    f = open('Animation.txt')
+    for k in range(10):     #Количество кадров
+        for j in range(6):  #Количество строк
+            print(f.readline(), end="")
+        time.sleep(0.5)
+        os.system('cls')
+    f.close()
