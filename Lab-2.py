@@ -18,15 +18,15 @@ def drawFlag():
 
 def drawCircles():
     #Вывод узора
-    print("      ▄▄▄▄      "*15)
-    print("   ▄█▀▀  ▀▀█▄   "*15)
-    print(" ▄█▀        ▀█▄ "*15)
-    print("▄█            █▄"*15)
-    print("█              █"*15)
-    print("▀█            █▀"*15)
-    print(" ▀█▄        ▄█▀ "*15)
-    print("   ▀█▄▄  ▄▄█▀   "*15)
-    print("      ▀▀▀▀      "*15)
+    print("      ▄▄▄▄      "*10)
+    print("   ▄█▀▀  ▀▀█▄   "*10)
+    print(" ▄█▀        ▀█▄ "*10)
+    print("▄█            █▄"*10)
+    print("█              █"*10)
+    print("▀█            █▀"*10)
+    print(" ▀█▄        ▄█▀ "*10)
+    print("   ▀█▄▄  ▄▄█▀   "*10)
+    print("      ▀▀▀▀      "*10)
 
 def drawCtg():
     #Построение графика
